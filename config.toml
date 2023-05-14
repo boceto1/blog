@@ -9,6 +9,7 @@ copyright = "Copyright © 2023, Jean Karlo Obando, all rights reserved."
 pluralizelisttitles = false
 paginate = 10
 enableEmoji = true
+IsServer = true
 
 [Params]
     name = "jeankaobando"
@@ -23,9 +24,11 @@ enableEmoji = true
     # Title to be displayed in header
     headerTitle = 'blog.jeankaobando.com: ~/$'
     # User image
-    titleImage = 'images/index.png'
+    titleImage = 'images/jean.jpg'
     # Copyright text displayed in footer
     footerCopyrightText = 'Jean Karlo Obando 2023'
+    recentPostsOnIndex = true
+    showPrevNextPostNavigation = false
 
 [[menu.social]]
   name = "GitHub"
