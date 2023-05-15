@@ -2,25 +2,20 @@ baseURL = 'https://www.blog.jeankaobando.com/'
 languageCode = 'en-us'
 title = "Blog of Jean Karlo Obando"
 theme = "chringel-hugo-theme"
-
 author = "Jean Karlo Obando"
 copyright = "Copyright © 2023, Jean Karlo Obando, all rights reserved."
 
 pluralizelisttitles = false
 paginate = 10
 enableEmoji = true
-IsServer = true
 
 [Params]
     name = "jeankaobando"
     description = "Personal Blog of Jean Karlo Obando"
-
     github_user = "boceto1"
     github_repo = "https://github.com/boceto1"
     github_banner = true
-
     favicon = "favicon.ico"
-
     # Title to be displayed in header
     headerTitle = 'blog.jeankaobando.com: ~/$'
     # User image
