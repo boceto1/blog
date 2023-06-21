@@ -167,7 +167,7 @@ Bueno si te interesa ahondar en ese caso te invito a revisar la clase del profes
 ## Conclusión
 Finalmente porque una solución es mejor que las otras. Miremos la siguiente gráfica por un momento.
 
-<!-- ![analisis](./images/analisis.jpg) -->
+![Análisis de Complejidad de las Soluciones](images/analisis.jpg "Análisis de Complejidad de las Soluciones")
 
 En la gráfica ustedes pueden observar cómo el número de pasos para completar la solución crece de manera más lenta en la solución $O(\sqrt{n})$ que en la solución $O(n)$.
 
