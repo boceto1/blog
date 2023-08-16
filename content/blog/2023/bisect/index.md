@@ -2,13 +2,13 @@
 title: "¿Cómo funciona la función bisect en JS?"
 author: Me
 type: post
-date:  2023-07-12T09:58:30-05:00
+date:  2023-08-16T09:58:30-05:00
 # optional
-lastmod: 2023-07-12T09:58:30-05:00
+lastmod: 2023-08-16T09:58:30-05:00
 cover:
   src: feature.jpg
   caption: Ilustración gráfica relacionada al algoritmo bisect.
-draft: true
+draft: false
 categories:
   - Computer Science
   - Algorithms
@@ -26,7 +26,7 @@ math: katex
 - [Recursos](#recursos)
 
 ## Introducción
-Trabajando en un ejercicio de algoritmos me encontré con la siguiente situación: Necesitaba determinar si dentro de un arreglo de posiciones de un caracter dentro de un string, existia un valor después de una posición dada. Ejemplo:
+Mientras trabajaba en un ejercicio de algoritmos, me encontré con la siguiente situación: necesitaba determinar si dentro de un arreglo de posiciones de un carácter dentro en un string existía un valor después de una posición dada. Ejemplo:
 
 ```javascript
 // Existe un caracter "a" en el string después de la posición 4?
@@ -48,7 +48,7 @@ Una manera sencilla de resolver este problema es la siguiente:
 
 3. Si se itera todo el arreglo, significa que no existe esa posición, entonces retornar -1.
 
-Aquí esta la implementación
+Aquí está la implementación:
 
 ```javascript
 const getNextPositionAfter = (positions, targetPosition) => {
@@ -118,7 +118,7 @@ Bajo esta premisa, me encontre que existe una función en Python que hace precis
 Si vamos a la documentación de Python nos indica lo siguiente acerca de bisect.
 
 > Bisect provee un soporte para mantener listas ordenadas sin la necesidad de hacer un reordenamiento después de un inserción.
-Mas información [aquí](https://docs.python.org/3/library/bisect.html#module-bisect)
+Más información [aquí](https://docs.python.org/3/library/bisect.html#module-bisect)
 
 Veamos a continuación cómo funciona:
 
@@ -132,7 +132,7 @@ print(bisect([0, 1, 2, 5], 7)) # 4
 print(bisect([0, 1, 2, 5], -1)) # 0
 ```
 
-Si analizamos las salidas podemos concluir lo siguiente:
+Si analizamos las salidas, podemos concluir lo siguiente:
 
 * Si encuentra que el elemento es mayor o igual al valor que está analizando, devuelve su valor + 1, para mantener la lista ordenada
 * Si el elemento es mayor el último valor del arreglo, retorna cómo indice el tamaño del arreglo
@@ -188,7 +188,7 @@ console.log(bisectRight([0, 1, 2, 5], 7)) // 4
 console.log(bisectRight([0, 1, 2, 5], -1)) // 0
 ```
 
-Cómo se ve en el código, ya no tenemos la sentencia para verificar si el valor se encuentra en el arreglo. Lo que tratamos es forzar que el startIdx nos indique la posición en la que debería estar un valor dado en el arreglo.
+Como se ve en el código, ya no tenemos la sentencia para verificar si el valor se encuentra en el arreglo. Lo que tratamos es forzar que el startIdx nos indique la posición en la que debería estar un valor dado en el arreglo.
 
 Qué pasa si el valor está en el arreglo? Pues cómo se ve la sección `else` del algoritmo, el índice retornado será el de la derecha ` startIdx = midIdx + 1;`.
 
@@ -252,13 +252,13 @@ console.log(getNextPositionAfter([0, 1, 2, 5], 5)); // -1
 // Aquí debería estar implementado bisectRight
 ```
 
-Boom!!! Tenemos una nueva solución para nuestro problema inicial el cual tiene una complejidad de tiempo de $O(log n)$ que es mucho mejor a $O(n)$ cómo se puede ver en la siguiente gráfica.
+Boom!!! Tenemos una nueva solución para nuestro problema inicial, el cual tiene una complejidad de tiempo de $O(log n)$, que es mucho mejor a $O(n)$, cómo se puede ver en la siguiente gráfica.
 
 ![Análisis de Complejidad de las Soluciones](complejidad.jpg "Análisis de Complejidad de las Soluciones")
 
 ## Conclusión
 1. La función bisect nos permite identificar la posición en la que debería ir un valor si fuera agregado a una lista.
-2. Siempre debemos estar atentos a los datos ocultos de un problema, en este caso el saber que el arreglo es ordenado nos permitió aplicar bisect que redujo la complejidad de nuestro problema significativamente.
+2. Siempre debemos estar atentos a los datos ocultos de un problema, en este caso el saber que el arreglo es ordenado nos permitió aplicar bisect, lo que redujo la complejidad de nuestro problema significativamente.
 3. Si una función no está implementada en tu lenguaje, siempre puedes implementarla tú :D.
 
 ## Recursos
