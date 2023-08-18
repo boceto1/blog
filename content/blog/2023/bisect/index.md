@@ -16,7 +16,7 @@ description: En este post analizamos la función de Python Bisect, su implementa
 math: katex
 ---
 
-# Tabla de Contenidos
+## Tabla de Contenidos
 - [Introducción](#introducción)
 - [Binary Search](#binary-search)
 - [Función Bisect](#función-bisect)
@@ -111,7 +111,7 @@ Si puedo plantear el problema en otras palabras puedo decir que lo que buscamos 
 
 > Encontrar la posición en la que podemos insertar un elemento dado de tal manera que la lista siga ordenada.
 
-Bajo esta premisa, me encontre que existe una función en Python que hace precisamente esto y esta basada en Binary Search.
+Bajo esta premisa, me encontré que existe una función en Python que hace precisamente esto y esta basada en Binary Search.
 
 ## Función Bisect
 
