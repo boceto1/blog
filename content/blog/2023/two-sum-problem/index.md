@@ -27,7 +27,7 @@ math: katex
 - [Recursos](#recursos)
 
 ## Introducción
-Uno de los problemas más comunes dentro de las entrevistas técnicas es el problema "Two Sum". El problema puede parecer fácil a simple vista, pero permite identificar al entrevistador, la capacidad del desarrollador para analizar la relación entre el uso de espacio y memoria. Además es fundamental entender este problema para resolver el problema "Three Sum". 
+Uno de los problemas más comunes dentro de las entrevistas técnicas es el problema "Two Sum". El problema puede parecer fácil, pero no te dejes engañar porque puede ser mas interesante de lo que crees. Además es fundamental para resolver el problema "Three Sum". 
 
 Comencemos!!
 
@@ -49,7 +49,7 @@ res: [0, 1]
 ## Solución Fuerza Bruta
 La primera idea que se nos puede venir a la mente es iterar el arreglo utilizado dos loops anidados.
 
-Tomamos un elemento del arreglo y verificamos si la suma de este valor con otro elemento del arreglo es igual a `target`. Si es el caso, retornamos los índices estos valores, caso contrario tomamos el siguiente número y así hasta el final. Si no encuentro un par de valores que cumplan con el requerimiento devuelvo un arreglo vacío.
+Tomamos un elemento del arreglo y verificamos si la suma de este valor con otro elemento del arreglo es igual a `target`. Si es el caso, retornamos los índices estos valores, caso contrario tomamos el siguiente número y así hasta el final. Repetimos el procesos con cada elemento del arreglo y si no encuentro un par de valores que cumplan con el requerimiento devuelvo un arreglo vacío.
 
 La implementación sería la siguiente:
 
@@ -72,7 +72,7 @@ console.log(twoSum([2,5,7,10,3], 11)); // []
 
 Una pequeña variación a este algoritmo parte del siguiente razonamiento:
 
-Estamos buscando un valor `x` y un valor `y` para encontrar target. El for loop externo nos da el valor de x - (`nums[i]`), el valor de `target` ya lo tenemos. El único valor que nos falta es `y` - (`nums[j]`), que se encuentra en el for loop interno. El valor de `y` es igual a `target - x`. Utilizando esta fórmula podemos evitar realizar la suma cada vez que comparamos valores.
+Estamos buscando un valor `x` y un valor `y` tal que su suma sea `target`. El for loop externo nos da el valor de x o `nums[i]`, el valor de `target` ya lo tenemos. El único valor que nos falta es `y` o `nums[j]`, que se encuentra en el for loop interno. Pero el valor de `y` es igual a `target - x`. Utilizando esta fórmula podemos evitar realizar la suma cada vez que comparamos valores.
 
 ```javascript
 const twoSum = (nums, target) => {
@@ -100,7 +100,7 @@ Una complejidad cuadrática en un algoritmo no es recomendable, por lo que veamo
 ## Solución Hash Map
 La primera solución tiene una complejidad $O(n^2)$, la idea es tratar de buscar que la solución tenga un mejor complejidad, la que puede ser linear.
 
-Si ponemos atención al problema, un dato es que existe una respuesta válida por cada entrada. Eso significa que para un valor `x` pude existir uno y solo un valor `y` tal que `x + y = target`. Con esto en mente, ¿será que podemos encontrar nuestros valores usando un solo loop?. 
+Si ponemos atención al problema, un dato importante es que existe una respuesta válida por cada entrada. Eso significa que para un valor `x` pude existir uno y solo un valor `y` tal que `x + y = target`. Con esto en mente, ¿será que podemos encontrar nuestros valores usando un solo loop?. 
 
 Probemos lo siguiente, si tomamos el primer valor del arreglo `2` y calculamos su complemento este es igual a `9 - 2 = 7`. Entonces, si 7 existe en el arreglo, cómo en efecto lo está, solo necesitamos encontrarlo y este será el resultado. Generalizando, podemos guardar cada número y su índice en un `hash map` y si este es complemento de otro número, entonces es nuestra respuesta. 
 
@@ -131,7 +131,7 @@ console.log(twoSum([2,5,7,10,3], 11)); // []
 Si analizamos la complejidad de tiempo de este algoritmo podemos notar que tenemos dos loops no aninados, lo que me da $O(n) + O(n)$, que simplificando es igual a $O(n)$. Por otro lado, la complejidad de espacio es $O(n)$ dado que guardamos n número de elementos en el mapa.
 
 
-Ahora, este algoritmo puede resultar redundante en algunos casos. Primero, tenemos dos loops, uno para generar el mapa y otro para encontrar los índices. Además volvemos a necesitar una condición para evitar que la suma se de entre el iguales elementos. Refactorizemos el código.
+Ahora, este algoritmo puede resultar redundante en algunos casos. Primero, tenemos dos loops, uno para generar el mapa y otro para encontrar los índices. Además necesitamos una condición para evitar que la suma se de entre el iguales elementos. Refactorizemos el código.
 
 
 ```javascript
@@ -175,7 +175,7 @@ Para enteneder la solución partamos del siguiente ejercicio mental:
 
 Tenemos el arreglo = `[-4, -1, 1, 3, 5, 6, 8, 11]` y un valor target igual a `8`.
 
-Que pasa si sumamos el valor del primer elemento con el del último: `-4 + 11 = 7`. Es valor que buscamos? No. Este valor es menor que el `target`.
+Que pasa si sumamos el valor del primer elemento con el del último: `-4 + 11 = 7`. Es el valor que buscamos? No. Este valor es menor que el `target`.
 
 Necesitamos que el valor de la suma crezca, para ello no utilezemos el menor valor del arreglo sino el segundo más pequeño, es decir `-1`. Entonces `-1+11 = 10`. Es el valor que buscamos? No. Pero el valor es mayor al que buscamos. 
 
@@ -218,11 +218,11 @@ Para hacer este análisis me gustaría que comparar las 2 complejidades de tiemp
 
 Cómo se ve en la gráfica, los algoritmos que tienen una complejidad lineal son por mucho más eficientes que la solución por fuerza bruta, que tiene una complejidad cuadrática. 
 
-Por otro lado si comparamos las dos soluciones lineales, podemos observar que aquella que utiliza dos punteros no requiere de espacio extra para dar respuesta al problema. Sin embargo, está limitada a esa condición. Por el contrario, la solución que usa el hash map funciona con cualquier arreglo sin importar el orden.
+Por otro lado si comparamos las dos soluciones lineales, podemos observar que aquella que utiliza dos punteros no requiere de espacio extra para dar respuesta al problema. Sin embargo, está limitada solo a arreglos ordenados. Por el contrario, la solución que usa el hash map funciona con cualquier arreglo sin importar el orden.
 
-_¿Qué pasa si decidimos, primero ordernar el arreglo y luego aplicar la solución con dos puntureso?_
+_¿Qué pasa si decidimos, primero ordernar el arreglo y luego aplicar la solución con dos punteros?_
 
-En primer lugar la complejidad de tiempo del algoritmo sería $O(nlogn)$, complejidad del algoritmo de búsqueda y mucho menos eficiente que la complejidad lineal. Por otro lado perdermos la referencia de los índices, por lo que nuestra respuesta no sería la correcta. Y si decidimos guardar los índices, estaríamos usando espacio, que es lo que buscamos evitar.
+En primer lugar la complejidad de tiempo del algoritmo sería $O(nlogn)$, complejidad del algoritmo de búsqueda. Esta complejidad es mucho menos eficiente que la complejidad lineal. Por otro lado perdermos la referencia de los índices, por lo que nuestra respuesta no sería la correcta. Y si decidimos guardar los índices, estaríamos usando espacio, que es lo que buscamos evitar.
 
 
 ## Aprendizajes y Reflexiones
