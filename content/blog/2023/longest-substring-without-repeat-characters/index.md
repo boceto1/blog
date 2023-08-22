@@ -8,7 +8,7 @@ lastmod: 2023-08-18T17:19:36-05:00
 cover:
   src: feature.jpg
   caption: Imagen descriptiva del problema "The longest substring without repeat characters"
-draft: true
+draft: false
 categories:
   - Ciencias de la Computación
   - Algoritmo y Estructura de Datos
@@ -94,7 +94,7 @@ const maxSubstrings = (string) => {
   console.log(maxSubstrings('bcdefefihkb')); // 6
 ```
 
-Al momento de ejecutar el algoritmo vemos que practiamente recorremos dos veces por cada valor, cuando es el caracter inicial del substring o cuando es parte de otro. Esto hecho nos índica que lo complejidad de tiempo del algoritmo es $O(n^2)$. Otra manera de verlo es que al momento de utilizar dos loops aninados estamos utilizando una complejidad cuadrática.
+Al momento de ejecutar el algoritmo vemos que en el peor escenario recorremos n veces cada valor. Esto hecho nos índica que la complejidad de tiempo del algoritmo es $O(n^2)$. Otra manera de verlo es que al momento de utilizar dos loops anidados estamos utilizando una complejidad cuadrática.
 
 En el caso del análisis de espacio vemos que en el peor escenario (que todos los caracteres sean iguales), necesitamos almacenar todos los elementos en el set. Hecho por el cual la complejidad de tiempo es $O(n)$.
 
@@ -103,11 +103,11 @@ Cómo hemos comentado en otros casos, un algoritmo de complejidad cuadrática no
 
 El problema con la primera solución es que para la construcción del substring leemos cada valor al menos dos veces, lo podemos evitar?
 
-Por ejemplo si tomamos el string `bcdefefihkb`, el primer substring que podemos armar es `bcdef`. Es necesario evaluar valores para c,d,e,f. La respuesta es no, porque terminará la construcción en el mismo elemento, la segunda `e` del arreglo. Si queremos no ser rendundantes, deberíamos comenzar a construir el siguiente substring en la primera letra `f` del arreglo.
+Por ejemplo si tomamos el string `bcdefefihkb`, el primer substring que podemos armar es `bcdef`. Es necesario evaluar substring que empiezen con c,d,e,f. La respuesta es no, porque terminará la construcción en el mismo elemento, la segunda `e` del arreglo. Si queremos no ser rendundantes, deberíamos comenzar a construir el siguiente substring en la primera letra `f` del arreglo.
 
 Cómo lo logramos? Analizemos el siguiente enfoque.
 
-1. Definimos un variable llamado `maxLength` el cual nos ayudará a guardar el valor del máximo string. Pero también dos indices: `leftIdx`, `rightIdx`. Con `rightIdx` construimos los substring cómo la haciamos en la solución 1. Sin embargo, `leftIdx` nos ayudará a determinar el punto inicial para la construcción del siguiente substring. El cuál debe ser una posición más a la del elemento repetido.
+1. Definimos un variable llamado `maxLength` el cual nos ayudará a guardar el valor del máximo string. Pero también dos indices: `leftIdx`, `rightIdx`. Con `rightIdx` construimos los substring cómo lo haciamos en la primera solución. Sin embargo, `leftIdx` nos ayudará a determinar el punto inicial para la construcción del siguiente substring. El cuál debe ser una posición más a la del elemento repetido.
 2. Cómo saber las posiciones de los elementos? Utilizamos un HashMap en lugar de un Set para almacenar el valor y su posición.
 3. Evaluamos cada valor, si no es parte del HashMap lo agregamos con su posición.
 4. Si ya es parte del hash map, en primer lugar calculamos el length de ese string (restando rightIdx - leftIdx) y verificamos si es mayor a `maxLength`. Después movemos `leftIdx` hasta la posición del elemento repetido, borrando su posición del hashMap. Guardamos la nueva posición del elemento repetido y ubicamos `leftIdx` una posición más que este.
@@ -147,7 +147,7 @@ const maxSubstrings = (string) => {
 }
 ```
 
-_Nota_ Es importate acotar que el substring máximo se dé con los valores al final del string, por lo que es necesario evaluar cuál valor es el máximo también al final.
+_Nota:_ Es importante hacer una última comparación del valor de `maxLength` al final, dado que el substring con mayor longitud se haya construido con los elementos finales del string.
 
 Si hacemos el análisis vemos que igual tenemos dos loops aninados, cuál es la diferencia? El índice `leftIdx` se va a mover máximo d veces, correspondiente el valor del substring máximo, evitando así movimientos redundantes. La complejidad sería la siguiente $O(n+d)$, siendo d el valor máximo de un substring.
 
@@ -164,7 +164,7 @@ Una de las reglas al momento de hacer análisis BigO es que las constantes se el
 * $256 + 0(n) = O(n)$
 * $O(3) = O(1)$
 
-Entonces, teniendo esto en cuenta que valor constante tenemos en nuestro problema que podemos utilizar. Pensemos ....
+Entonces teniendo esto en cuenta esto, que valor constante tenemos en nuestro problema que podemos utilizar. Pensemos ....
 
 Cuántos caracteres están definidos en el código ASCII? 256 incluyendo caracteres estándar y extendidos. Si nuestro problema utiliza entradas basadas en este formato significa que el valor máximo que puede tener un substring sin que se repitan valores es 256
 
@@ -173,7 +173,7 @@ _Nota:_ El valor 256 puede cambiar dependiendo del formato de texto que usemos, 
 En base a este razonamiento, la complejidad de la solución anterior es la siguiente.
 
 * Complejidad de tiempo: $O(n+d) = O(n + 256) = O(n)$
-* Complejidad de espacio: $O(d) = O(1)$
+* Complejidad de espacio: $O(n) = O(d) = O(256) = O(1)$
 
 De esta manera la segunda solución, en realidad tenía una complejidad de tiempo lineal y una complejidad de espacio constante. Es en verdad una muy buena solución, pero era necesario este razonamiento para justificarlo.
 
