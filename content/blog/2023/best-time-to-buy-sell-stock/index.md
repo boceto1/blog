@@ -13,6 +13,7 @@ categories:
   - Ciencias de la Computación
   - Algoritmo y Estructura de Datos
 description: En este post exploraremos cómo resolver el problema "best time to buy and sell stock" y los errores que se pueden comenter en el proceso.
+math: katex
 ---
 
 ## Tabla de Contenidos
@@ -27,12 +28,12 @@ description: En este post exploraremos cómo resolver el problema "best time to 
 
 
 ## Introducción
-Nos encontramos en un nuevo post relacionado a resolver problemas de código. En este caso me gustaría que exploraramos juntos el problema "Best Time to Buy and Sell Stock". Me gustaría hacer un especial énfasis en los errores que uno puede cometer al enfrentar este problema. Empezemos!!!
+Nos encontramos en un nuevo post relacionado a resolver problemas de código. En este caso me gustaría que exploráramos juntos el problema "Best Time to Buy and Sell Stock". Me gustaría hacer un especial énfasis en los errores que uno puede cometer al enfrentar este problema. Empezemos!!!
 
 ## Descripción del Problema
 La descripción en LeetCode es la siguiente:
 
-> Dados un arreglo de precios que corresponden al valor de un stock en un día. Necesitamos maximizar la ganancia que se tiene al comprar un stock en un día y venderlo en otro día en el futuro.
+> Dado un arreglo de precios que corresponden al valor de un stock en un día. Necesitamos maximizar la ganancia que se tiene al comprar un stock en un día y venderlo en otro día en el futuro.
 
 El ejemplo viene con los siguientes casos de prueba.
 
@@ -40,14 +41,16 @@ El ejemplo viene con los siguientes casos de prueba.
 Ejemplo 
 Entrada: [7,1,5,3,6,4]
 Salida: 5
-Explicación: Valor es igual a 5. De comprar en el día 2 (valor 1) y vender en el día 5 (valor 6).
+Explicación: Valor es igual a 5. De comprar en el día 2 
+(valor 1) y vender en el día 5 (valor 6).
 
 Entrada: [7,6,4,3,1]
 Salida: 0
-Explicación: En este caso no existe ningún par de entradas nos devuelve un max profit.
+Explicación: En este caso no existe ningún par de 
+entradas nos devuelve un max profit.
 ```
 ## Solución Fuerza Bruta
-La primera solución de la cual me gustaría partir es la solución de fuerza bruta. Es decir calcular todos los posibles profits que podemos obtener, para ello nos apoyamos de dos loops anidados.
+La primera solución de la cual me gustaría partir es la de fuerza bruta. Es decir, calcular todos los posibles profits que podemos obtener. Para ello nos apoyamos de dos loops anidados.
 
 La implementación sería la siguiente:
 
@@ -74,7 +77,7 @@ Si hacemos un análisis de complejidad de tiempo, vemos que por cada valor recor
 Esta solución es correcta, pero al tener una complejidad cuadrática ya nos hace ruido. Podemos obtener una solución mejor. Claro que sí!!!
 
 ## Intentos aplicando solución 2 punteros
-En este post en especial me gustaría que exploraramos dos solciones que pasan los casos de prueba, pero que fallan en algunos `edge cases` al no considerar ciertos escenarios. Considero que este ejercicio que estamos haciendo es importante debido a que puede ayudarnos errores comunes que cometemos al enfrentarnos a este tipo de problemas.
+En este post en especial me gustaría que exploraramos dos soluciones que pasan los casos de prueba, pero que fallan en algunos `edge cases` al no considerar ciertos escenarios. Considero que esto puede ayudarnos a visualizar errores comunes que cometemos al enfrentarnos a este tipo de problemas.
 
 ### Primer Intento
 La primera idea que se nos puede venir a la mente, me pasó a mí, es pensar que el problema lo que busca en el fondo es determinar el valor mínimo y máximo del arreglo, siendo estos obviamente los que me pueden ofrecer el mayor profit.
@@ -101,9 +104,9 @@ Probemos otra idea.
 
 ### Segundo Intento
 
-Al momento de leer el ejercicio, se me vino a la mente que la manera de resolverlo es enfocarlo utilizando "dos índices"
+Al momento de leer el ejercicio, se me vino a la mente que la manera de resolverlo es enfocarlo utilizando la estratégia "dos índices".
 
-Tenemos que tomar en cuenta que siempre el valor de compra tiene que estar antes que el valor de compra. Ahora mi idea fué que tal si empiezo uno por la izquierda y otro por la derecha, de tal manera que voy moviendo mi puntero desde los extremos en la búsqueda de los valores mínimos y máximos.
+Tenemos que tomar en cuenta que siempre el valor de compra tiene que estar antes que el valor de venta. Ahora mi idea fué empezar los punteros por la izquierda y otro por la derecha, de tal manera que voy moviendo mi puntero desde los extremos en la búsqueda de los valores mínimos y máximos.
 
 La implementación sería la siguiente:
 
@@ -147,13 +150,14 @@ Los dos intentos, si bien fallidos, nos dejaron tres lecciones:
 
 * Necesitamos buscar un valor mínimo y máximo pero que cumpla la restricción.
 * Podemos aplicar una solución de dos punteros.
-* Necesitamos encontrar la forma correcta de move los dos punteros.
+* Necesitamos encontrar la forma correcta de mover los dos punteros.
 
 Ya intentamos ubicar los índices al inicio y al final, pero ahí obviamos algunas soluciones. Lo que necesitamos es asegurar que el valor de venta está después del valor de compra. Entonces probemos lo siguiente:
 
 1. Ubiquemos nuestros índices: leftIdx en el primer elemento y rightIdx en el segundo elemento.
-2. Evaluamos si el valor que está en la posición `rightIdx` es mayor al valor que está en la posición del `leftIdx`. Si es el caso, significa que estamos generando profit, entonces guardamos el valor cómo `maxProfit` y movemos el puntero `rightIdx` a la derecha para ver si podemos encontrar un mejor profite.
-3. Caso contrario, si `rightIdx` es menor significa dos cosas, que no vamos a generar profits con esos valores y que existe un valor mas pequeño con el que podriamos generar mejores profits.
+2. Evaluamos si el valor que está en la posición `rightIdx` es mayor al valor que está en la posición del `leftIdx`. Si es el caso, significa que estamos generando profit, entonces guardamos el valor cómo `maxProfit` y movemos el puntero `rightIdx` a la derecha para ver si podemos encontrar un mejor profit.
+3. Caso contrario, si `rightIdx` es menor significa dos cosas, que no vamos a generar profits con esos valores y que existe un valor mas pequeño con el que podriamos generar mejores profits, entonces movemos `leftIdx` hasta dónde está `rightIdx` y este puntero un valor más adelante.
+4. Repetimos este proceso hasta leer todos los elementos del arreglo.
 
 Si nos les queda muy claro, veamoslo con el siguiente ejemplo:
 
@@ -191,8 +195,10 @@ Si hacemos un análisis de complejidad de tiempo vemos que la solución exige qu
 El camino para resolver un problema exige que probemos muchas opciones, cada una de ellas nos va acercar a la solución correcta. En nuestro caso, la decisión de usar la solución de dos punteros era la correcta pero su implementación no era adecuado.
 
 ## Aprendizajes y Reflexiones
-1. Una solución del tipo "dos punteros" puede ayudarnos a simplificar una solución de cuadrática a lineal.
-2. No siempre vas a llegar a la solución a la primera, no te rindas.
+* Una solución del tipo "dos punteros" puede ayudarnos a simplificar una solución de cuadrática a lineal.
+* No siempre vas a llegar a la solución a la primera, no te rindas.
 
 ## Recursos
-1. 
+1. https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+2. https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/1735550/python-javascript-easy-solution-with-very-clear-explanation/
+
