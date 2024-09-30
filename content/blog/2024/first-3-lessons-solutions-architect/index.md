@@ -1,5 +1,5 @@
 ---
-title: "Mis primeras 3 lecciones cómo Arquitecto de Soluciones"
+title: "Mis primeras 3 lecciones como Arquitecto de Soluciones"
 author: Me
 type: post
 date:  2024-09-29T22:10:41-05:00
