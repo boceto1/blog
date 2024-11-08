@@ -7,33 +7,29 @@ date:  2024-11-06T06:03:41-05:00
 lastmod: 2024-11-06T06:03:41-05:00
 cover:
   src: feature.jpg
-  caption: Title image caption *Markdown* **supported**
-draft: true
+  caption: Imagen representativa del blog
+draft: false
 categories:
-  - A
-  - B
-  - C
+  - Programación
 tags:
-  - Hugo
-  - Game Development
-  - Internet of Things (IoT)
-  - Linux
-description: Read this interesting post, it's totally worth it.
+  - Clean Code
+  - Refactoring
+description: Es este blog analizamos el verdadero valor del software y la importancia de mantener la estructura del código lista para cambios futuros.
 math: katex
 ---
 
 ## Tabla de Contenidos
 - [Introducción](#introducción)
-- [Lección 1: Un nuevo comienzo](#lección-1-un-nuevo-comienzo)
-- [Lección 2: Pregunta, pregunta, pregunta](#lección-2-pregunta-pregunta-pregunta)
-- [Lección 3: El desarrollo no lo harás tú](#lección-3-el-desarrollo-no-lo-harás-tú)
+- [El verdadero valor y costo del software](#el-verdadero-valor-y-costo-del-software)
+- [Estructura vs Comportamiento](#estructura-vs-comportamiento)
+- [¿Cuándo? y ¿Dónde?](#cu%c3%a1ndo-y-d%c3%b3nde)
 - [Conclusión](#conclusión)
 - [Recursos](#recursos)
 
 
 ## Introducción
 
-En el post anterior [(link si no lo has revisado)](https://dev.to/boceto1/de-lo-funcional-hasta-lo-legible-con-tidyings-4lm8) discutimos el uso de "Tidyings", pequeñas acciones que mantienen una estructura limpia y, sobre todo, comprensible de nuestro código. Sin embargo, quedó pendiente abordar cuándo y dónde aplicar estos cambios. Si bien el cliente principal de nuestro código es otro programador, el cliente final sigue siendo el usuario, a quien no le importa si nos demoramos tres semanas arreglando nuestro código; lo que quiere es ver que la aplicación funcione y que se desarrollen nuevas funcionalidades.
+En el post anterior [(link si no lo has revisado)](https://blog.jeankaobando.com/blog/2024/from-functional-to-readable/) discutimos el uso de "Tidyings", pequeñas acciones que mantienen una estructura limpia y, sobre todo, comprensible de nuestro código. Sin embargo, quedó pendiente abordar cuándo y dónde aplicar estos cambios. Si bien el cliente principal de nuestro código es otro programador, el cliente final sigue siendo el usuario, a quien no le importa si nos demoramos tres semanas arreglando nuestro código; lo que quiere es ver que la aplicación funcione y que se desarrollen nuevas funcionalidades.
 
 Por ello, en esta ocasión vamos a entender cómo aplicar "Tidyings" y reforzar su importancia. Pero primero, profundicemos en el valor y el costo del software.
 
@@ -56,12 +52,12 @@ Analizando esta historia, podemos destacar dos puntos clave:
 
 Esto es precisamente lo que ocurre al crear software. Las empresas y sus desarrolladores se concentran tanto en lanzar funcionalidades rápidamente que descuidan la deuda técnica y las áreas de mejora. El proyecto funciona bien cuando es pequeño, pero cuando crece el código se vuelve un caos, lo que dificulta y hace riesgosa la implementación de cambios. El ambiente se vuelve hostil: el desarrollador está estresado porque teme dañar algo al hacer cambios, los dueños se frustran porque las tareas que antes eran rápidas ahora toman más tiempo, y los usuarios abandonan la aplicación, no sin antes quejarse de que las primeras versiones eran buenas pero ahora nada funciona.
 
-> *El software crea valor de dos formas:
-1. Haciendo cosas hoy
-2. En la posibilidad de hacer nuevas cosas mañana*
-
-Kent Beck
+> El software crea valor de dos formas:
+> 1. Haciendo cosas hoy
+> 2. En la posibilidad de hacer nuevas cosas mañana.
 > 
+> Kent Beck
+
 
 Kent Beck enfatiza precisamente esto: el valor del software no radica simplemente en su capacidad actual, sino en su flexibilidad para adaptarse y enfrentar cambios futuros.
 
@@ -79,7 +75,7 @@ $$
 cost(software) \cong cost(grandes cambios)
 $$
 
-Los grandes cambios están estrechamente relacionados con el nivel de acoplamiento del código. Cuantos más elementos se interrelacionen, más complejo será realizar cambios sin afectar otras partes. Esto lleva a la siguiente relación:
+Los grandes cambios están estrechamente relacionados con el nivel de acoplamiento del código. Cuantos más elementos se interrelacionen entre sí, más complejo será realizar cambios sin afectar otras partes. Esto lleva a la siguiente relación:
 
 $$
 cost(grandes cambios) \cong cost(coupling)
@@ -115,7 +111,8 @@ Esta distinción nos muestra que cada tipo de cambio requiere su propio enfoque.
 
 Por eso, el libro recomienda abordar estos dos tipos de cambios por separado, siempre que sea posible.
 
-<!-- ![Screenshot 2024-11-05 at 6.29.33 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e1e9977a-f507-4a38-9799-b8f2791df920/fd09202d-a833-44b3-a9ef-5a20ad9d6626/Screenshot_2024-11-05_at_6.29.33_AM.png) -->
+![Imagen Descriptiva de cambios de comportamiento vs estructura](behVsCom.jpg "Imagen del libro Tidy First? de Kent Beck, © 2021")
+
 
 ## ¿Cuándo? y ¿Dónde?
 
@@ -142,10 +139,8 @@ Finalmente, es crucial mantener siempre presente la pregunta: "¿Cómo puedo mej
 
 Un tema que nos ha quedado pendiente discutir es “coupling”, déjame saber si te gustaría tener un post dedicado solo a este tema.
 
-Basándome en el contenido del artículo, aquí te propongo 5 ejemplos de títulos que podrían ser adecuados:
+## Recursos:
 
-- El verdadero costo del software: Más allá del código
-- Tidyings: Manteniendo la cocina limpia en el desarrollo de software
-- La Equivalencia de Constantine: Entendiendo el costo del acoplamiento en el software
-- Estructura vs Comportamiento: Los dos tipos de cambios en el desarrollo de software
-- ¿Cuándo y dónde aplicar cambios estructurales en tu código?
+Tidy First, Kent Beck: https://learning.oreilly.com/library/view/tidy-first/9781098151232/ 
+
+SE Radio 615: Kent Beck on “Tidy First”: https://open.spotify.com/episode/6XHBSDSSuH0xBDz1LeiAUE?si=44cab186651b486d
