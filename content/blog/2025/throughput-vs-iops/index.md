@@ -16,6 +16,7 @@ tags:
   - Metrics
   - AWS Storage
 description: Explora cómo Throughput e IOPS influyen en la selección de servicios de almacenamiento en AWS, optimizando rendimiento según el manejo de datos masivos o transacciones rápidas y frecuentes
+---
 
 ## Tabla de Contenidos
 
