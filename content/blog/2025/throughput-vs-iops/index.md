@@ -8,7 +8,7 @@ lastmod: 2025-01-21T22:59:23-05:00
 cover:
   src: feature.jpg
   caption: 
-draft: true
+draft: false
 categories:
   - Solutions Architect
   - AWS
