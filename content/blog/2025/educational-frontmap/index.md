@@ -8,7 +8,7 @@ lastmod: 2025-01-26T22:10:53-05:00
 cover:
   src: feature.jpg
   caption: 
-draft: true
+draft: false
 categories:
   - Habilidades Blandas
   - Desarrollo Profesional
@@ -24,28 +24,27 @@ description: Aprende a construir un Educational Frontmap, una herramienta clave 
 1. [Introducción](#introducción)
 2. [¿Qué es un Educational Frontmap?](#qu%c3%a9-es-un-educational-frontmap)
 3. [¿Cómo construir un Educational Frontmap?](#c%c3%b3mo-construir-un-educational-frontmap)
-4. [Conclusión](#conclusi%c3%b3n)
-4. [Recursos](#recursos)
+4. [Beneficios](#beneficios)
+5. [Conclusión](#conclusi%c3%b3n)
+6. [Recursos](#recursos)
 
 ## Introducción:
 
-El entorno actual nos desafía a mantenernos en constante aprendizaje. Cada día aparecen nuevas tecnologías, técnicas o herramientas que nos permiten ser mejor en lo que hacemos y en el proceso disfrutarlo más. Para ello podemos apoyarnos de un sin fin de recursos como: videos de YouTube, libros, cursos, charlas, artículos, entre otros.  
+El entorno actual nos desafía a mantenernos en constante aprendizaje. Cada día aparecen nuevas tecnologías, técnicas o herramientas que nos permiten ser mejores en lo que hacemos y en el proceso disfrutarlo más. Para ello podemos apoyarnos de un sin fin de recursos como: videos de YouTube, libros, cursos, charlas, artículos, entre otros.  
 
-Sin embargo, en este afán de aprender nuevas cosas podemos perder el rumbo y sentirnos abrumados por la cantidad de información que existe. Lo que puede ocasionar que nos frustre no avanzar o no reconocer cada paso que damos en la construcción de nuestra carrera.
+Sin embargo, en este afán de aprender nuevas cosas podemos perder el rumbo y sentirnos abrumados por la cantidad de información que existe. Lo que puede ocasionar que nos frustre no avanzar o sea complejo reconocer cada paso que damos en la construcción de nuestra carrera.
 
 Para ello me gustaría presentarles la siguiente herramienta:
 
 ## ¿Qué es un Educational Frontmap?
 
-Un "educational frontmap" es un tablero que nos permite organizar y categorizar todos los recursos que hemos utilizado o tenemos interés de explorar. En cada una de estas categorías podemos encontrar cursos, blogs, libros, artículos, videos o personalidades que han contribuido a nuestra formación.
-
-![Imagen referencial a la diversidad de recursos educativos](librero.jpg "Imagen referencial a la diversidad de recursos educativos")
+Un "educational frontmap" es un tablero que nos permite organizar y categorizar todos los recursos que hemos utilizado o tenemos interés de explorar. El tablero está dividio por categorìas y en cada una de estas podemos encontrar cursos, blogs, libros, artículos, videos o personalidades que han contribuido a nuestra formación en relación a un tema
 
 De esta manera podemos contar con un lugar donde se encuentran todos los elementos que han contribuido a nuestra formación y son un espacio para consultas posteriores.
 
 Esta herramienta la encontré hace algunos años leyendo un blog, decidí explorarla e incorporarla en mi vida y me ha dado grandes resultados.  
 
-Permíteme explicarte cómo construir el tuyo.
+Permíteme explicarte cómo construirlo.
 
 ## ¿Cómo construir un Educational Frontmap?
 
@@ -90,6 +89,16 @@ Para cada área, agrega los siguientes datos para cada recurso:
 ![Ejemplo de Recurso](card.jpg "Ejemplo de Recurso")
 
 Puedes ampliar esta estructura según tus necesidades y personalizarla de acuerdo a tus objetivos de aprendizaje.
+
+## Beneficios
+
+El organizar tus recursos en un Educational Frontmap puede impactar de gran manera en la construcción de tu carrera dado a que te permite centralizar en un lugar todos los recursos que has utilizado y bien organizado peude permitirte:
+
+1. Tener un acceso rápido a funtes de consulta por área de interes.
+2. Adjuntar elementos adicionales que complemtan el recurso utilizado. Por ejemplo puedes añadir tus notas de clase a un curso que hayas tomado.
+3. Usando filtros pueden permitirte ver que áreas necesitas trabajar más, comenzar a explorar o simplemente dejar de lado.
+4. Es una buena carta de presentación cómo profesionales.
+
 
 ## Conclusión:
 
