@@ -6,7 +6,6 @@ author = "Jean Karlo Obando"
 copyright = "Copyright © 2023, Jean Karlo Obando, all rights reserved."
 
 pluralizelisttitles = false
-paginate = 10
 enableEmoji = true
 
 [Params]
@@ -35,3 +34,6 @@ enableEmoji = true
 [markup]
   [markup.highlight]
     style = "dracula"
+
+[pagination]
+  pagerSize = 10
