@@ -15,7 +15,7 @@ tags:
   - DDD
   - Software Architecture
   - Software Design
-description: Read this interesting post, it's totally worth it.
+description: Descubre cómo DDD ayuda a conectar negocio y tecnología con un lenguaje común para construir sistemas alineados al valor real.
 ---
 ## Tabla de Contenidos
 
