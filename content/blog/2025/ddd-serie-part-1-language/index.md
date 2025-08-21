@@ -8,7 +8,7 @@ lastmod: 2025-08-20T22:01:24-05:00
 cover:
   src: feature.jpeg
   caption: 
-draft: true
+draft: false
 categories:
   - Cuando el negocio habla y el código escucha, una serie sobre DDD
 tags:
@@ -45,7 +45,7 @@ Este fue mi punto de partida hacia Domain-Driven Design (DDD). En esta serie de 
 
 Como desarrolladores y líderes técnicos nuestra área de confort es la creación de software, somos buenos en ello. Pero por un momento nos hemos puesto a pensar en qué hacemos. No me refiero si habilitamos un servicio “REST” o estamos implementando un “Dead Letter Queue”. Lo que pregunto es  ¿conocemos qué hace nuestro sistema? ¿por qué la empresa considera que es importante lo que estamos construyendo? ¿cuál es el giro de negocio? ¿cómo aportamos valor?
 
-> “El corazón del software es su capacidad para resolver problemas relacionados con el dominio de un usuario.”
+> El corazón del software es su capacidad para resolver problemas relacionados con el dominio de un usuario.”
 > 
 > 
 > — Eric Evans, *Domain-Driven Design*
