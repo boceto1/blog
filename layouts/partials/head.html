@@ -88,7 +88,7 @@
     {{ $styles = resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
   {{ end }}
 
-  {{- if .Site.IsServer }}
+  {{ if hugo.IsServer }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
   {{ else }}
     {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
