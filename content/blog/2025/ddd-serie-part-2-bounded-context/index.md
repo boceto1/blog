@@ -8,7 +8,7 @@ lastmod: 2025-08-30T08:26:29-05:00
 cover:
   src: feature.jpeg
   caption:
-draft: true
+draft: false
 categories:
   - Cuando el negocio habla y el código escucha, una serie sobre DDD
 tags:
