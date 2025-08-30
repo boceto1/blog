@@ -136,5 +136,6 @@ Aquí lo dejamos por ahora. En la siguiente parte explicaremos cómo estos lími
 
 ## Recursos
 
-- https://app.pluralsight.com/library/courses/clean-architecture-patterns-practices-principles/table-of-contents
-- https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/
+- Pluralsight. (s. f.). Clean Architecture: Patterns, Practices, and Principles. Recuperado de https://app.pluralsight.com/library/courses/clean-architecture-patterns-practices-principles/table-of-contents
+
+- Evans, E. (2003). Domain-Driven Design: Tackling Complexity in the Heart of Software. Addison-Wesley Professional. Recuperado de https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/
