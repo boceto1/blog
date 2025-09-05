@@ -8,7 +8,7 @@ lastmod: 2025-09-05T11:21:54-05:00
 cover:
   src: feature.jpeg
   caption:
-draft: true
+draft: false
 categories:
   - Cuando el negocio habla y el código escucha, una serie sobre DDD
 tags:
@@ -169,13 +169,13 @@ La comunidad de DDD es muy activa y existe en especial una, como el [DDD-Crew](h
 
 De este conjunto de elementos, en esta ocasión vamos a utilizar el relacionado con Bounded Context. DDD-Crew nos provee de una plantilla en donde podemos ubicar cada una de las ideas que discutimos en la sección anterior. La plantilla es la siguiente:
 
-<!-- ![image.png](attachment:1e4bccc8-4c28-48ff-b249-c5b1e9cbf64e:image.png) -->
+![Bounded Context Canvas v5 propuesto por DDD Crew](bounded-context-canvas-v5.jpg "Bounded Context Canvas v5 propuesto por DDD Crew")
 
 Como pueden ver en la imagen, en esta plantilla podemos formalizar el nombre de nuestro BC y su propósito. Categorizarlo como parte de un subdominio central, de soporte o genérico (ya veremos estas categorías a profundidad en un futuro post). Describir explícitamente las acciones de nuestro sistema, sus entidades y reglas. Finalmente, contamos con una sección para describir algún supuesto, métricas de cómo evaluar las acciones del BC y preguntas.
 
 Para nuestro ejemplo el resultado sería el siguiente:
 
-<!-- ![Shipments BC.drawio.png](attachment:0cd3fe4d-3d82-4ac3-b4e0-17e41b1d2b52:Shipments_BC.drawio.png) -->
+![Bounded Context de Envíos (Shipments)](shipments-bc.jpg "Bounded Context de Envíos (Shipments)")
 
 > 🗒️ ***Nota:** Algunos términos se encuentran en inglés en el modelo debido a que estos se transformaran en el nombre de las clases, funciones y eventos que se implementarán en el código, que por estándar se escribe en este idioma.*
 > 
