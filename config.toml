@@ -23,6 +23,7 @@ enableEmoji = true
     footerCopyrightText = 'Jean Karlo Obando 2023'
     recentPostsOnIndex = true
     showPrevNextPostNavigation = false
+    customCSS = ["css/custom.css"]
 
 [[menu.social]]
   name = "GitHub"

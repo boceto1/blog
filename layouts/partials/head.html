@@ -104,4 +104,6 @@
   {{ if (eq $.Page.Params.math "katex") }}
     {{ partial "helpers/katex.html" . }}
   {{ end }}
+  {{ $custom := resources.Get "css/custom.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $custom.RelPermalink }}" integrity="{{ $custom.Data.Integrity }}">
 </head>
