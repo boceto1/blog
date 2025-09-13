@@ -39,7 +39,7 @@ Comencemos.
 
 ## ¿Qué tenemos que implementar?
 
-A partir del Bounded Context descrito en el [capítulo anterior](http://localhost:1313/blog/2025/ddd-serie-part-3-modeling-bc/) (imagen 1), tenemos la siguiente información sobre la acción ‘Generar órdenes de envío’.
+A partir del Bounded Context descrito en el [capítulo anterior](https://blog.jeankaobando.com/blog/2025/ddd-serie-part-3-modeling-bc/) (imagen 1), tenemos la siguiente información sobre la acción ‘Generar órdenes de envío’.
 
 ![Imagen 1: Bounded Context de Envíos (Shipments)](image-1-shipments-bc.jpg "Imagen 1: Bounded Context de Envíos (Shipments)")
 
