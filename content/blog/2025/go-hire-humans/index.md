@@ -7,7 +7,7 @@ date:  2025-09-22T21:59:08-05:00
 lastmod: 2025-09-22T21:59:08-05:00
 cover:
   src: feature.jpg
-draft: true
+draft: false
 categories:
   - Editorial
 tags:
