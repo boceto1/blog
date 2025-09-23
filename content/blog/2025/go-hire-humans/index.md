@@ -13,14 +13,14 @@ categories:
 tags:
   - IA
   - Software Engineering
-description: Desde COBOL hasta la IA, siempre se ha intentado reemplazar a los programadores. Pero la ingeniería de software es más que código, es creatividad y solución de problemas.
+description: Desde COBOL hasta la IA, siempre se ha intentado reemplazar a los programadores. Pero el desarrollo de software es más que código, es creatividad y solución de problemas.
 ---
 
 ## Tabla de Contenidos
 
 1. [Introducción](#introducción)
 2. [Siempre existió un deseo de reemplazar a los desarrolladores](#siempre-existi%c3%b3-un-deseo-de-reemplazar-a-los-desarrolladores)
-3. [¿Qué significa ser un Ingeniero de Software?](#qu%c3%a9-significa-ser-un-ingeniero-de-software)
+3. [¿Qué significa ser un desarrollador de Software?](#qu%c3%a9-significa-ser-un-desarrollador-de-software)
 4. [El paradigma de Jevons](#el-paradigma-de-jevons)
 5. [Conclusión](#conclusi%c3%b3n)
 6. [Recursos](#recursos)
@@ -158,7 +158,7 @@ Que el “Inglés” sea el lenguaje de programación más popular no es una ide
 
 Pero así logremos construir un sistema 100% en lenguaje natural, eso no va a eliminar la necesidad de ingenieros o desarrolladores de software, porque su función no está en escribir código, su función va más allá.
 
-## ¿Qué significa ser un Ingeniero de Software?
+## ¿Qué significa ser un desarrollador de Software?
 
 Siempre me llamó la atención ver cómo algunos de mis compañeros de la universidad pasaban horas antes de una prueba de programación estudiando el código, memorizándolo. Eso para mí, nunca tuvo ningún sentido, era poco probable que el ejercicio visto en clase fuera el mismo de la prueba. Los exámenes requerían comprender cómo utilizar un conjunto de sentencias (if, else, for, do while) junto con estructuras de datos (arrays, maps, objects) para resolver un problema, sea el que sea.
 
@@ -168,9 +168,9 @@ Siempre me llamó la atención ver cómo algunos de mis compañeros de la univer
 > — Niklaus Wirth, *Algorithms + Data Structures = Programs* (1976)
 > 
 
-Con el paso del tiempo he ido comprendiendo también que no soy un desarrollador de Frontend o Backend, o que mi carrera no se define por si desarrollo en JavaScript o Python. He tenido la oportunidad de trabajar con diferentes herramientas y en diversos escenarios, que al final he comprendido lo que soy:  un Ingeniero de Software. Pero, ¿qué significa eso para mí?
+Con el paso del tiempo he ido comprendiendo también que no soy un desarrollador de Frontend o Backend, o que mi carrera no se define por si desarrollo en JavaScript o Python. He tenido la oportunidad de trabajar con diferentes herramientas y en diversos escenarios, que al final he comprendido lo que soy:  un desarrollador de Software. Pero, ¿qué significa eso para mí?
 
-Ser Ingeniero de Software significa contar con un conjunto de habilidades y herramientas (principalmente mentales) que permiten resolver problemas de la vida real a través de sistemas informáticos. Mi trabajo no es escribir código, no es hacer una página web o una API. Mi trabajo es tomar una necesidad como la creación de una cuenta bancaria, con sus reglas y asociaciones e implementarla a través de un sistema.
+Ser desarrollador de Software significa contar con un conjunto de habilidades y herramientas (principalmente mentales) que permiten resolver problemas de la vida real a través de sistemas informáticos. Mi trabajo no es escribir código, no es hacer una página web o una API. Mi trabajo es tomar una necesidad como la creación de una cuenta bancaria, con sus reglas y asociaciones e implementarla a través de un sistema.
 
 Pero para llegar a esa implementación es importante comprender el contexto sobre el cual se presenta esa necesidad, entender a las personas que van a utilizar el producto y aquellos que están interesados en crearlo. Además, conocer el conjunto de herramientas que ofrece el mercado para implementar este tipo de soluciones, profundizar en patrones y buenas prácticas, explorar frameworks, de tal manera que los sistemas no funcionen solamente en su lanzamiento, sino que vivan y evolucionen a través del tiempo de manera sustentable.
 
@@ -203,7 +203,7 @@ Kent Beck señala que la inclusión de la Inteligencia Artificial es un paso má
 
 ## Conclusión
 
-La promesa de que la IA va a reemplazar a los ingenieros de software no es verdadera, ni tampoco nueva. El desarrollo de software va más allá de la creación de código, requiere usar un conjunto de herramientas para resolver problemas y atender necesidades de los usuarios. El llegar a definir esa solución y llevarla a cabo es un tarea humana.
+La promesa de que la IA va a reemplazar a los desarrolladores de software no es verdadera, ni tampoco nueva. El desarrollo de software va más allá de la creación de código, requiere usar un conjunto de herramientas para resolver problemas y atender necesidades de los usuarios. El llegar a definir esa solución y llevarla a cabo es un tarea humana.
 
 Eso no significa que como desarrolladores o ingenieros nos debemos relajar. Esta nueva era exige de nosotros mayor preparación y estudio. Si la IA me permite resolver un problema de días en horas ¿qué haremos con el tiempo restante? Esa pregunta es clave y quienes aprovechen mejor su tiempo son los que menos riesgo tendrán de dejar de ser relevantes, pero eso es tema para otro post.
 
